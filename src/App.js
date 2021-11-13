@@ -1,6 +1,22 @@
 function App() {
   return (
     <div className="wrapper clear">
+      <div className="overlay">
+        <div className="drawer">
+          <h2>Корзина</h2>
+
+          <div className="cartItem d-flex align-center">
+            <img className="mr-20" src="/img/foods/1.png" width={104} height={104} alt="food" />
+            <div style={{ba}} className="cartImg"></div>
+            <div className="mr-20">
+              <p className="mb-5">Биг Мак Бекон</p>
+              <b>149 руб</b>
+            </div>
+            <img class="remove" src="/img/btn_remove.svg" alt="remove" />
+          </div>
+        </div>
+      </div>
+
       <header className="d-flex justify-between">
         <div className="headerLeft">
           <img width="60" height="60" src="/img/logo.png"/>
@@ -22,8 +38,21 @@ function App() {
           </li>
         </ul>
       </header>
+      <div className="align-center d-flex justify-between mb-0">
+        <h1>Всё меню</h1>
+        <div className="search-block">
+          <button className="button">
+            <img src="/img/search.png" width="14" height="14" alt="Search"/> 
+          </button>
+          <input placeholder="Поиск..."/>
+        </div>
+      </div>
       <div className="content p-40 d-flex">
+
         <div className="card">
+          <div className="favorite">
+            <img src="/img/heart_like.svg" alt="Like"/>
+          </div>
           <img src="/img/foods/1.png" width={200} height={180}></img>
           <h5>Биг Мак Бекон</h5>
           <div className="d-flex justify-between align-center">

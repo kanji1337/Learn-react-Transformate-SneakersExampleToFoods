@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: darkcyan;
+  background-color: rgb(255, 251, 0);
+}
+
+* {
+  font-family: "Inter", system-ui;
 }
 
 .wrapper{
@@ -16,7 +17,7 @@ body {
   margin: 35px auto;
   h1{
     padding-bottom: 0%;
-    margin-left:100px;
+    margin-left:50px;
   }
 }
 
@@ -25,6 +26,7 @@ header{
   display: flex;
   padding:30px;
   border-bottom:1px solid #EAEAEA;
+  margin-bottom: 25px;
   .headerLeft{
     display: flex;
     align-items: center;
@@ -62,7 +64,13 @@ header{
   border:1px solid #F3F3F3;
   width: 240px;
   padding:25px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
   border-radius: 50px;
+
+  &:hover{
+    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-10px);
+  }
 
   h5{
     font-weight: 400;
@@ -80,3 +88,63 @@ header{
   cursor: pointer;
 }
 
+.search-block{
+  border-radius: 10px;
+  padding: 0 15px;
+  border:1px solid #F3F3F3;
+  margin-right: 100px;
+  input{
+    border:0;
+    width: 250px;
+    font-size:16px;
+  }
+  padding:13px;
+}
+
+.favorite{
+  position: absolute;
+  cursor: pointer;
+}
+
+.overlay{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100%;
+  background-color:rgba(0,0,0, 0.5);
+  z-index: 1;
+}
+
+.drawer{
+  position: absolute;
+  width: 385px;
+  height: 100%;
+  right:0;
+  background: #FFFFFF;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding:30px;
+  h2{
+    margin:0;
+  }
+}
+
+.cartItem{
+  border:1px solid #F3F3F3;
+  border-radius: 20px;
+  overflow: hidden;
+  p{
+    font-size: 16px;
+  }
+  b{
+    font-size:14px;
+  }
+  .remove{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
