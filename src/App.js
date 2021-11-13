@@ -6,8 +6,7 @@ function App() {
           <h2>Корзина</h2>
 
           <div className="cartItem d-flex align-center">
-            <img className="mr-20" src="/img/foods/1.png" width={104} height={104} alt="food" />
-            <div style={{ba}} className="cartImg"></div>
+            <img className="mr-20" src="/img/foods/1.png" width={104} height={104}/>
             <div className="mr-20">
               <p className="mb-5">Биг Мак Бекон</p>
               <b>149 руб</b>
