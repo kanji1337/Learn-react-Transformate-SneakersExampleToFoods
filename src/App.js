@@ -3,7 +3,9 @@ function App() {
     <div className="wrapper clear">
       <header className="d-flex justify-between">
         <div className="headerLeft">
-          <img width="60" height="60" src="/img/logo.png"/>
+          <a href="localhost:3000">
+            <img width="60" height="60" src="/img/logo.png"/>
+          </a>
           <div>
             <h3 className="text-uppercase">Fast food</h3>
             <p className="opacity-7">Магазин вкусной еды</p>
