@@ -1,13 +1,17 @@
+import Card from "./components/cards";
 function App() {
   return (
     <div className="wrapper clear">
-      <div className="overlay">
+      <div style={{display:"none"}} className="overlay">
         <div className="drawer">
           <div className="mb-20">
-            <h2>Корзина</h2>  
+            <h2 className="d-flex justify-between">
+              Корзина <img className="cu-p" src="/img/btn_remove.svg" alt="remove" />
+            </h2>  
           </div>
 
           <div className="items">
+
           <div className="cartItem d-flex align-center mb-20">
             <img className="mr-20" src="/img/foods/1.png" width={104} height={104}/>
             <div className="mr-20">
@@ -25,7 +29,18 @@ function App() {
             </div>
             <img class="remove" src="/img/btn_remove.svg" alt="remove" />
           </div>
+
+          <div className="cartItem d-flex align-center mb-20">
+            <img className="mr-20" src="/img/foods/1.png" width={104} height={104}/>
+            <div className="mr-20">
+              <p className="mb-5">Биг Мак Бекон</p>
+              <b>149 руб</b>
+            </div>
+            <img class="remove" src="/img/btn_remove.svg" alt="remove" />
           </div>
+
+          </div>
+                 
 
           <div className="cartTotalBlock">
             <ul>
@@ -77,24 +92,12 @@ function App() {
       </div>
       <div className="content p-40 d-flex">
 
+        <Card/>
+
         <div className="card">
           <div className="favorite">
             <img src="/img/heart_like.svg" alt="Like"/>
           </div>
-          <img src="/img/foods/1.png" width={200} height={180}></img>
-          <h5>Биг Мак Бекон</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column">
-              <span>Цена:</span>
-              <b>149 руб</b>
-            </div>
-            <button className="button">
-              <img width={11} height={11} src="/img/plus.png"/>
-            </button>
-            </div>
-        </div>
-
-        <div className="card">
           <img src="/img/foods/2.png" width={200} height={180}></img>
           <h5>Чикен Панини Тоскана</h5>
           <div className="d-flex justify-between align-center">
@@ -109,6 +112,9 @@ function App() {
         </div>
 
         <div className="card">
+          <div className="favorite">
+            <img src="/img/heart_like.svg" alt="Like"/>
+          </div>
           <img src="/img/foods/3.png" width={200} height={180}></img>
           <h5>Яичница с сыром</h5>
           <div className="d-flex justify-between align-center">
@@ -123,6 +129,9 @@ function App() {
         </div>
 
         <div className="card">
+          <div className="favorite">
+            <img src="/img/heart_like.svg" alt="Like"/>
+          </div>
           <img src="/img/foods/4.png" width={200} height={180}></img>
           <h5>Омлет с ветчиной</h5>
           <div className="d-flex justify-between align-center">
